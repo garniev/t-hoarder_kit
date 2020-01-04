@@ -269,11 +269,11 @@ def main():
     num_keys = 30
     # defino argumentos de script
     parser = argparse.ArgumentParser(description='Examples usage Twitter API REST, search method')
-    parser.add_argument('keys_app', type=str, help='file with app keys')
-    parser.add_argument('keys_user', type=str, help='file with user keys')
-    parser.add_argument('file_in', type=str, help='name file in with id_tweet')
-    parser.add_argument('--dir_out', type=str, default='./', help='Dir data output')
-    parser.add_argument('--top', type=str, default='50', help='top for summary')
+    parser.add_argument('keys_app', help='file with app keys')
+    parser.add_argument('keys_user', help='file with user keys')
+    parser.add_argument('file_in', help='name file in with id_tweet')
+    parser.add_argument('--dir_out', default='./', help='Dir data output')
+    parser.add_argument('--top', default='50', help='top for summary')
     # obtego los argumentos
     args = parser.parse_args()
     app_keys_file = args.keys_app

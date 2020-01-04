@@ -43,8 +43,8 @@ def get_access_key(keys_app_file, username):
 
     file_out = username + '.key'
     f_out = open(file_out, 'w')
-    f_out.write("%s\n" % (token_key))
-    f_out.write("%s\n" % (token_secret))
+    f_out.write("%s\n" % token_key)
+    f_out.write("%s\n" % token_secret)
     print 'Access token generado con éxito. Guardado en keys/%s:' % file_out
     return
 

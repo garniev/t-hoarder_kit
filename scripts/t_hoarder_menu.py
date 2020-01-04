@@ -312,7 +312,7 @@ def main():
                     community_col = raw_input('Enter a colum number of community in  community file: ')
                     if args.windows:
                         command = "python2.7 %stweets_add_communities.py  %s %s %s %s " % (
-                        path_scripts, inputfile, communitiefile, user_col, community_col)
+                        path_scripts, inputfile, communityfile, user_col, community_col)
                     else:
                         command = "python2.7 %stweets_add_communities.py  '%s' '%s' '%s' '%s' " % (
                         path_scripts, inputfile, communityfile, user_col, community_col)
@@ -324,7 +324,7 @@ def main():
                     communityfile = get_inputfile('Enter a file with nunmber-communities name: ', path_experiment)
                     if args.windows:
                         command = "python2.7 %stweets_spread_by_community.py  %s  --community %s " % (
-                        path_scripts, inputfile, communitiefile)
+                        path_scripts, inputfile, communityfile)
                     else:
                         command = "python2.7 %stweets_spread_by_community.py  '%s' --community '%s' " % (
                         path_scripts, inputfile, communityfile)
