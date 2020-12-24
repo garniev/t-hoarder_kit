@@ -50,7 +50,6 @@ def get_access_key(keys_app_file, username):
 
 
 def main():
-    # defino argumentos de script
     parser = argparse.ArgumentParser(description='It gets the access and secret key of a user')
     parser.add_argument('keys_app', type=str, help='file with app keys')
     parser.add_argument('user', type=str, help='twitter user')

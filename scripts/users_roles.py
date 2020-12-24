@@ -260,16 +260,16 @@ class WhatIsMyRole(object):
         list_tokens = re.findall(r'#\w+', source, re.U)
         return list_tokens
 
-    def get_relation(self, statuse):
+    def get_relation(self, statuses):
         relations = []
-        list_mentions = re.findall(r'@\w+', statuse)
+        list_mentions = re.findall(r'@\w+', statuses)
         if len(list_mentions) == 0:
             return 'None', relations
         else:
-            if re.match(r'[\.]*(@\w+)[^\t\n]+', statuse):
+            if re.match(r'[\.]*(@\w+)[^\t\n]+', statuses):
                 relations.append(list_mentions[0])
                 return '@', relations
-            elif re.match(r'rt (@\w+):', statuse):
+            elif re.match(r'rt (@\w+):', statuses):
                 relations.append(list_mentions[0])
                 # print 'RT detected'
                 return 'rt', relations
